@@ -33,17 +33,45 @@ footer {
   filter: invert(1);
 }
 
-nav {
+#nav-bar {
   line-height: 4rem;
   width: 60%;
   color: #fff;
 }
 
 #sub-menu {
-
+  display: none;
+  position: absolute;
+  height: 100vh;
+  width: 12rem;
+  background: rgba(82, 74, 64, 0.95);
+  color: white;
+  padding: 1.7rem;
+  font-family: Times New Roman, serif;
 }
 
-ul {
+#sub-menu ul {
+  list-style: none;
+}
+
+#sub-menu ul li {
+  margin: 1rem 0;
+}
+
+#nav-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+  background: none;
+  background-image: url("./resource/icon/icon-close.svg");
+  cursor: pointer;
+}
+
+#main-ul {
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -52,7 +80,7 @@ ul {
   font-family: Times New Roman, serif;
 }
 
-li {
+.main-li {
   margin: 0 10px;
 }
 
@@ -178,6 +206,7 @@ h2 {
   height: 15rem;
   width: 15rem;
   filter: opacity(0.7);
+  cursor: pointer;
 }
 
 .product-name {
@@ -207,6 +236,7 @@ h2 {
   bottom: 4%;
   right: 4%;
   filter: opacity(0.5);
+  cursor: pointer;
   z-index: 999;
 }
 
