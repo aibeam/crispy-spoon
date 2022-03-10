@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&family=Gowun+Batang:wght@400;700&display=swap');
+
+body {
+  margin: 0 auto;
+}
+
+.product-area {
+  padding: 2rem 6rem;
+  min-height: 60vh;
+}
+
+header {
+  height: 5.5rem;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  z-index: 999;
+}
+
+footer {
+  padding: 2rem 1rem;
+  background: #7d5a4f;
+  text-align: center;
+  font-size: 0.7rem;
+  color: #fff;
+}
+
+#logo {
+  display: inline-block;
+  width: 20%;
+  text-align: right;
+  filter: invert(1);
+}
+
+nav {
+  line-height: 4rem;
+  width: 60%;
+  color: #fff;
+}
+
+#sub-menu {
+
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: -40px;
+  font-family: Times New Roman, serif;
+}
+
+li {
+  margin: 0 10px;
+}
+
+#nav-icon {
+  display: none;
+}
+
+#nav-btn {
+  width: 20%;
+  line-height: 7rem;
+}
+
+.icon {
+  text-decoration: none;
+  cursor: pointer;
+  filter: invert(1);
+}
+
+.main-banner {
+  height: 20rem;
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  margin-top: -8%;
+}
+
+h2 {
+  font-family: Times New Roman, serif;
+  text-align: center;
+  color: #7d5a4f;
+  margin-bottom: 3rem;
+}
+
+.box {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  display: inline-flex;
+  flex-direction: row;
+  margin-bottom: 5rem;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.arrow {
+  position: absolute;
+  height: 16.1rem;
+  width: 50px;
+  border: none;
+  font-size: 2.5rem;
+  color: #7d5a4f;
+  font-family: 'Fredoka', sans-serif;
+  z-index: 1;
+}
+
+.arrow-rv {
+  position: absolute;
+  height: 8.5rem;
+  width: 50px;
+  border: none;
+  font-size: 2.5rem;
+  color: #7d5a4f;
+  font-family: 'Fredoka', sans-serif;
+  z-index: 1;
+}
+
+.left-btn {
+  left: 0;
+  background: linear-gradient(to right, white 60%, rgba(255,255,255,0) 100%);
+}
+
+.right-btn {
+  right: 0;
+  background: linear-gradient(to left, white 60%, rgba(255,255,255,0) 100%);
+}
+
+.product-list {
+  margin-bottom: 5rem;
+  padding: 0 3%;
+}
+
+.slide {
+  margin: 0 0.5rem;
+}
+
+.card {
+  width: 14rem;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 3rem;
+}
+
+.rv-card {
+  text-align: center;
+  border: 1px solid #ededed;
+  border-radius: 10px;
+  padding: 0.5rem 2rem;
+  width: 15rem;
+  margin: 5px;
+}
+
+.rv-card:first-child {
+  margin-left: 3rem;
+}
+
+.product {
+  border: 1px solid #ededed;
+  padding: 1.5rem;
+  height: 10rem;
+  width: 10rem;
+  overflow: hidden;
+}
+
+.product-img {
+  height: 10rem;
+  width: 10rem;
+}
+.product-img:hover {
+  height: 15rem;
+  width: 15rem;
+  filter: opacity(0.7);
+}
+
+.product-name {
+  display: block;
+  font-family: 'Gowun Batang', serif;
+  font-weight: 700;
+  color: #7d5245;
+  margin-top: 0.5rem;
+}
+
+.product-price {
+  font-family: 'Gowun Batang', serif;
+  font-weight: 400;
+  color: #78706f;
+  font-size: 0.8rem;
+}
+
+.product-rv {
+  font-family: 'Gowun Batang', serif;
+  font-weight: 400;
+  color: #78706f;
+  font-size: 1rem;
+}
+
+#top-btn {
+  position: fixed;
+  bottom: 4%;
+  right: 4%;
+  filter: opacity(0.5);
+  z-index: 999;
+}
+
+@media screen and (max-width: 915px) {
+  .product-list {
+      padding: 0 1%;
+  }
+  .card {
+    width: 13.5rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .main-banner {
+    height: 15rem;
+  }
+
+  .product-area {
+      padding: 2rem 3rem;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .product-list {
+      padding: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .product-area {
+      padding: 2rem;
+  }
+  #logo {
+    text-align: center;
+    width: 60%;
+    order: 2;
+  }
+  nav {
+    display: none;
+  }
+  #nav-icon {
+    display: inline-block;
+    width: 20%;
+    order: 1;
+    cursor: pointer;
+    filter: invert(1);
+    text-align: center;
+    line-height: 7rem;
+  }
+  #nav-btn {
+    order: 3;
+    width: 20%;
+  }
+  .main-banner {
+    height: 6rem;
+  }
+
+  @media screen and (max-width: 516px) {
+    .product-list {
+      text-align: justify;
+    }
+    .card {
+      width: 13rem;
+    }
+  }
+}

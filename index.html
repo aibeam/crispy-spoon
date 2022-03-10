@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>베이커리</title>
+  <link rel="stylesheet" href="./index.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" >
+    $(function(){
+      $(document).on('scroll', function(){
+        if($(window).scrollTop()>100){
+          $('header').css('background','rgba(255, 255, 255, 0.9)');
+          $('nav').css('color', 'black');
+          $('.icon').css('filter','none');
+          $('#nav-icon').css('filter','none');
+        } else {
+          $('header').css('background','none');
+          $('nav').css('color', 'white');
+          $('.icon').css('filter','invert(1)');
+          $('#nav-icon').css('filter','invert(1)');
+        }
+      });
+
+      $(window).on('scroll', function(){
+        if($(window).scrollTop()+$(window).height() > $(document).height()-100){
+          $('#top-btn').css('filter','invert(1)');
+        } else {
+          $('#top-btn').css('filter','opacity(0.5)');
+        }
+      });
+
+      $('#nav-icon').on('click', function(){
+        $('#sub-menu').css('display','block');
+      });
+
+      $('#top-btn').on('click', function(){
+        $('html, body').animate({scrollTop: 0}, 500);
+        return false;
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1 id="logo">
+      <img src="./resource/bakery-logo.png" alt="Dolly Madison Bakery" height="50px">
+    </h1>
+
+    <div id="nav-icon">
+      <img src="./resource/icon/icon-menu.svg" alt="메뉴" width="20px">
+    </div>
+    <nav id="sub-menu">
+      <ul>
+        <li>Donut</li>
+        <li>Sandwich</li>
+        <li>Cake</li>
+        <li>QnA</li>
+      </ul>
+    </nav>
+
+    <nav>
+      <ul>
+        <li>Donut</li>
+        <li>Sandwich</li>
+        <li>Cake</li>
+        <li>QnA</li>
+      </ul>
+    </nav>
+
+    <div id="nav-btn">
+      <a class="icon" href="#">
+        <img src="./resource/icon/icon-search.svg" alt="검색" width="20px">
+      </a>
+      <a class="icon" href="#">
+        <img src="./resource/icon/icon-profile.svg" alt="내 정보" width="20px">
+      </a>
+      <a class="icon" href="#">
+        <img src="./resource/icon/icon-basket.svg" alt="장바구니" width="20px">
+      </a>
+    </div>
+  </header>
+
+  <section>
+    <div class="main-banner">
+      <video id="video" src="./resource/bakery-video.mp4" autoplay loop muted="muted">
+      </video>
+    </div>
+
+    <div class="product-area">
+      <div class="box">
+        <h2>Best Items</h2>
+        <button class="arrow left-btn" type="button">&lt</button>
+        <button class="arrow right-btn" type="button">&gt</button>
+        <div class="slider" style="width: -webkit-fill-available;">
+          <div class="card slide">
+            <div class="product">
+              <img class="product-img"src="./resource/product/donut/d-choco.png" alt="초코 도너츠">
+            </div>
+            <div>
+              <span class="product-name">
+                초콜렛 도넛
+              </span>
+              <span class="product-price">
+                3,000원
+              </span>
+            </div>
+          </div>
+          <div class="card slide">
+            <div class="product">
+              <img class="product-img"src="./resource/product/donut/d-sugar.png" alt="화이트 슈가 도너츠">
+            </div>
+            <div>
+              <span class="product-name">
+                화이트 슈가 도넛
+              </span>
+              <span class="product-price">
+                2,800원
+              </span>
+            </div>
+          </div>
+          <div class="card slide">
+            <div class="product">
+              <img class="product-img"src="./resource/product/cake/c-happy.png" alt="해피 스카일 홀 케이크">
+            </div>
+            <div>
+              <span class="product-name">
+                해피 스마일
+              </span>
+              <span class="product-price">
+                34,000원
+              </span>
+            </div>
+          </div>
+          <div class="card slide">
+            <div class="product">
+              <img class="product-img"src="./resource/product/sandwich/s-bacon.png" alt="베이컨 샌드위치">
+            </div>
+            <div>
+              <span class="product-name">
+                베이컨 샌드위치
+              </span>
+              <span class="product-price">
+                4,500원
+              </span>
+            </div>
+          </div>
+          <div class="card slide">
+            <div class="product">
+              <img class="product-img"src="./resource/product/cake/c-strawberry.jpeg" alt="딸기 홀 케이크">
+            </div>
+            <div>
+              <span class="product-name">
+                스트로베리 쇼트 케이크
+              </span>
+              <span class="product-price">
+                30,000원
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2>New Arrivals</h2>
+        <div class="product-list">
+          <div class="card">
+            <div class="product">
+              <img class="product-img"src="./resource/product/cake/c-happy.png" alt="해피 스카일 홀 케이크">
+            </div>
+            <div>
+              <span class="product-name">
+                해피 스마일
+              </span>
+              <span class="product-price">
+                34,000원
+              </span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="product">
+              <img class="product-img"src="./resource/product/cake/c-chocolate.png" alt="초콜렛 무스 홀 케이크">
+            </div>
+            <div>
+              <span class="product-name">
+                초콜렛 무스
+              </span>
+              <span class="product-price">
+                32,000원
+              </span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="product">
+              <img class="product-img"src="./resource/product/cake/c-strawberry.jpeg" alt="딸기 홀 케이크">
+            </div>
+            <div>
+              <span class="product-name">
+                스트로베리 쇼츠
+              </span>
+              <span class="product-price">
+                30,000원
+              </span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="product">
+              <img class="product-img"src="./resource/product/sandwich/s-bacon.png" alt="베이컨 샌드위치">
+            </div>
+            <div>
+              <span class="product-name">
+                베이컨 샌드위치
+              </span>
+              <span class="product-price">
+                4,500원
+              </span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="product">
+              <img class="product-img"src="./resource/product/sandwich/s-sausage.png" alt="소세지 샌드위치">
+            </div>
+            <div>
+              <span class="product-name">
+                소세지 샌드위치
+              </span>
+              <span class="product-price">
+                4,500원
+              </span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="product">
+              <img class="product-img"src="./resource/product/sandwich/s-eggcheese.png" alt="에그 치즈 샌드위치">
+            </div>
+            <div>
+              <span class="product-name">
+                에그 치즈 샌드위치
+              </span>
+              <span class="product-price">
+                4,500원
+              </span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="product">
+              <img class="product-img"src="./resource/product/sandwich/s-sourdough.png" alt="터키 샌드위치">
+            </div>
+            <div>
+              <span class="product-name">
+                터키 샌드위치
+              </span>
+              <span class="product-price">
+                4,500원
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <h2>Reviews</h2>
+        <button class="arrow-rv left-btn" type="button">&lt</button>
+        <button class="arrow-rv right-btn" type="button">&gt</button>
+        <div class="slider box">
+          <div class="rv-card">
+            <p class="product-name">- 헤이즐 도넛 -</p>
+            <p class="product-rv">
+              제 최애 도넛이예요!<br/>
+              단거 중에 최고 달달해요:)
+            </p>
+          </div>
+          <div class="rv-card">
+            <p class="product-name">- 베이글 -</p>
+            <p class="product-rv">
+              아침에 먹으면 든든해요.<br/>
+              블루베리잼이랑 궁합 최고!!
+            </p>
+          </div>
+          <div class="rv-card">
+            <p class="product-name">- 해피 스마일 -</p>
+            <p class="product-rv">
+              친구 생일 케이크 구매했는데<br/>
+              너무 예뻐서 대만족~
+            </p>
+          </div>
+          <div class="rv-card">
+            <p class="product-name">- 슈팅스타 도넛 -</p>
+            <p class="product-rv">
+              색은 맛없을거 같은데<br/>
+              달달하고 씹으면 팡팡 터져요!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="top-btn">
+    <img src="./resource/icon/icon-top.svg" alt="맨위로 가기" width="40px">
+  </div>
+
+  <footer>
+    <p>
+      대표이사. 김란 │ 사업자등록번호. 123-45-6789 │ 통신판매업신고. 2022-부산-0310
+    </p>
+    <p>
+      회사명. ㈜Dolly Madison Bakery │ 전화. 051-123-1004 │ 주소. 부산광역시 해운대구 매디슨로 2
+    </p>
+    <p>
+      ⓒ 2022. DOLLY All rights reserved.
+    </p>
+  </footer>
+
+<script type="text/javascript">
+  document.getElementById('video').play();
+</script>
+</body>
+</html>
