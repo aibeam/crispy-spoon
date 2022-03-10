@@ -302,4 +302,10 @@ h2 {
       width: 13rem;
     }
   }
+
+  @media screen and (max-width: 485px) {
+    .product-list {
+      text-align: center;
+    }
+  }
 }
