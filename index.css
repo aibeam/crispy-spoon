@@ -11,7 +11,7 @@ body {
 
 header {
   height: 5.5rem;
-  width: 100%;
+  width: 100vw;
   position: fixed;
   display: flex;
   flex-direction: row;
@@ -31,6 +31,7 @@ footer {
   width: 20%;
   text-align: right;
   filter: invert(1);
+  cursor: pointer;
 }
 
 #nav-bar {
@@ -40,18 +41,20 @@ footer {
 }
 
 #sub-menu {
-  display: none;
   position: absolute;
   height: 100vh;
   width: 12rem;
+  margin-left: -20rem;
   background: rgba(82, 74, 64, 0.95);
   color: white;
   padding: 1.7rem;
   font-family: Times New Roman, serif;
+  z-index: 99;
 }
 
 #sub-menu ul {
   list-style: none;
+  margin-left: -15px;
 }
 
 #sub-menu ul li {
@@ -63,11 +66,8 @@ footer {
   top: 20px;
   right: 20px;
   border: none;
-  width: 24px;
-  height: 24px;
   filter: invert(1);
   background: none;
-  background-image: url("./resource/icon/icon-close.svg");
   cursor: pointer;
 }
 
@@ -97,6 +97,32 @@ footer {
   text-decoration: none;
   cursor: pointer;
   filter: invert(1);
+}
+
+#search-btn {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+#search-wrap {
+  display: none;
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+#search-bar {
+  height: 2rem;
+  width: 60vw;
+  padding: 0 20px;
+  border: none;
+}
+#search-close {
+  background: none;
+  border: none;
+  filter: invert(1);
+  cursor: pointer;
 }
 
 .main-banner {
@@ -163,7 +189,7 @@ h2 {
 
 .product-list {
   margin-bottom: 5rem;
-  padding: 0 3%;
+  padding: 0 2%;
 }
 
 .slide {
@@ -274,7 +300,7 @@ h2 {
     width: 60%;
     order: 2;
   }
-  nav {
+  #nav-bar {
     display: none;
   }
   #nav-icon {
@@ -293,19 +319,19 @@ h2 {
   .main-banner {
     height: 6rem;
   }
+}
 
-  @media screen and (max-width: 516px) {
-    .product-list {
-      text-align: justify;
-    }
-    .card {
-      width: 13rem;
-    }
+@media screen and (max-width: 516px) {
+  .product-list {
+    text-align: justify;
   }
+  .card {
+    width: 13rem;
+  }
+}
 
-  @media screen and (max-width: 485px) {
-    .product-list {
-      text-align: center;
-    }
+@media screen and (max-width: 485px) {
+  .product-list {
+    text-align: center;
   }
 }

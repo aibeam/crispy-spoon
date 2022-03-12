@@ -12,14 +12,18 @@
 <body>
   <header>
     <h1 id="logo">
-      <img src="./resource/bakery-logo.png" alt="Dolly Madison Bakery" height="50px">
+      <a href="./index.html">
+        <img src="./resource/bakery-logo.png" alt="Dolly Madison Bakery" height="50px">
+      </a>
     </h1>
 
     <div id="nav-icon">
       <img src="./resource/icon/icon-menu.svg" alt="메뉴" width="20px">
     </div>
     <div id="sub-menu">
-      <button id="nav-close" type="button"></button>
+      <button id="nav-close" type="button">
+        <img src="./resource/icon/icon-close.png" alt="메뉴창 닫기" width="25px">
+      </button>
       <ul>
         <li>Donut</li>
         <li>Sandwich</li>
@@ -38,15 +42,24 @@
     </nav>
 
     <div id="nav-btn">
-      <a class="icon" href="#">
+      <button id="search-btn" class="icon" type="button">
         <img src="./resource/icon/icon-search.svg" alt="검색" width="20px">
-      </a>
+      </button>
       <a class="icon" href="#">
         <img src="./resource/icon/icon-profile.svg" alt="내 정보" width="20px">
       </a>
       <a class="icon" href="#">
         <img src="./resource/icon/icon-basket.svg" alt="장바구니" width="20px">
       </a>
+    </div>
+
+    <div id="search-wrap">
+      <div style="display: flex;">
+        <input id="search-bar" type="text" name="search" placeholder="검색어를 입력하세요"/>
+        <button id="search-close" type="button">
+          <img src="./resource/icon/icon-close.png" alt="검색창 닫기" width="30px">
+        </button>
+      </div>
     </div>
   </header>
 

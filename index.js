@@ -22,20 +22,36 @@ $(function(){
   });
 
   $('#nav-icon').on('click', function(){
-    $('#sub-menu').css('display','block');
+    $('#sub-menu').animate({marginLeft: "0rem"}, 600);
   });
 
   $('#nav-close').on('click', function(){
-    $('#sub-menu').css('display','none');
+    $('#sub-menu').animate({marginLeft: "-20rem"}, 600);
   });
 
   $('#top-btn').on('click', function(){
     $('html, body').animate({scrollTop: 0}, 500);
   });
 
+  $('#search-btn').on('click', function(){
+    $('#nav-icon').fadeOut();
+    $('#logo').fadeOut();
+    $('#nav-btn').fadeOut();
+    $('#search-wrap').fadeIn();
+  });
+
+  $('#search-close').on('click', function(){
+    $('#search-wrap').fadeOut();
+    $('#logo').fadeIn();
+    $('#nav-btn').fadeIn();
+    if($(window).width() <= 600){
+      $('#nav-icon').fadeIn();
+    }
+  });
+
   $("#best-right").click(function() {
       $("#best-slider").animate({
-      marginLeft: "-450px"
+        marginLeft: "-450px"
       }, function() {
           $("#best-slider .card:first").appendTo("#best-slider");
           $("#best-slider").css({marginLeft: 0});
@@ -49,7 +65,7 @@ $(function(){
 
   $("#rv-right").click(function() {
       $("#rv-slider").animate({
-      marginLeft: "-310px"
+        marginLeft: "-310px"
       }, function() {
           $("#rv-slider .rv-card:first").appendTo("#rv-slider");
           $("#rv-slider").css({marginLeft: 0});
